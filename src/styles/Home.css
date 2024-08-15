@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); /*Raleway Normal*/
+
+*{
+    background-color: rgb(0, 0, 0);
+}
+
+.hm-gf-container-1{
+    max-height: 100vh;
+    height: 100vh;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.hm-gf-t{
+    margin-left: -30rem;
+    margin-top: 2rem;
+}
+
+.hm-gf-t1{
+    font-size: 80px;
+    margin-top: 7rem;
+    margin-bottom: 30px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+}
+
+.hm-gf-t2{
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    background: linear-gradient(to right, #9856bf, #00ffd0);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+    margin-right: 7rem;
+    margin-top: 20px;
+}
