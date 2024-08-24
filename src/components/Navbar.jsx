@@ -16,20 +16,24 @@ const Navbar = () => {
   };
 
   return (
-    <header className='nb-container'>
-      <nav className='nb-nav'>
-        <a href='/' className='nb-logo-link'>
-          <img src={Logo1} alt='Logo' className='nb-logo'/>
-        </a>
-        <ul className={`nb-ul ${menuOpen ? 'active' : ''}`}>
-          <li><a href='/home'>Home</a></li>
-          <li><a href='/about'>About</a></li>
-          <li><a href='/services'>Services</a></li>
-          <li><a href='/contact'>Contact</a></li>
-          <li><button className='nb-quote-button' onClick={handleQuoteClick}>Get Quote</button></li>
-        </ul>
-        <div className='nb-hamburger' onClick={toggleMenu}>
-          {menuOpen ? <CloseIcon style={{ color: 'white' }} /> : <MenuIcon style={{ color: 'white' }} />}
+    <header className='navbar-unique-container'>
+      <nav className='navbar-unique'>
+        <div className='navbar-logo-container'>
+          <a href='/' className='navbar-logo-link'>
+            <img src={Logo1} alt='Logo' className='navbar-logo'/>
+          </a>
+        </div>
+        <div className='navbar-menu-container'>
+          <ul className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
+            <li><a href='/home'>Home</a></li>
+            <li><a href='/about'>About Us</a></li>
+            <li><a href='/services'>Services</a></li>
+            <li><a href='/contact'>Contact</a></li>
+          </ul>
+        </div>
+        <button className='navbar-quote-btn' onClick={handleQuoteClick}>Get Quote</button>
+        <div className='navbar-hamburger' onClick={toggleMenu}>
+          {menuOpen ? <CloseIcon /> : <MenuIcon />}
         </div>
       </nav>
     </header>
