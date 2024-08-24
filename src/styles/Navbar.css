@@ -199,6 +199,7 @@
 
     .navbar-logo {
         margin-top: 1rem; /* Space above logo on small screens */
+        margin-inline-start: -2rem;
     }
 
     .navbar-menu {
@@ -233,6 +234,6 @@
 
     .navbar-hamburger {
         display: block;
-        margin-inline-end: 2rem; /* Adjust margin to fit within the navbar */
+        margin-inline-end: 3rem; /* Adjust margin to fit within the navbar */
     }
 }
