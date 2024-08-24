@@ -1,13 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;900&display=swap');
 
+:root {
+    --font-large: clamp(2rem, 4vw, 3.75rem);
+    --font-small: clamp(0.875rem, 2vw, 1.3rem);
+    --font-button: clamp(0.875rem, 2.5vw, 1.25rem);
+    --font-button-large: clamp(1rem, 2.8vw, 1.5rem);
+    --button-height: clamp(40px, 3vw, 60px);
+    --button-height-large: clamp(50px, 3.5vw, 70px);
+    --button-width: clamp(120px, 8vw, 150px);
+    --button-width-large: clamp(140px, 9vw, 180px);
+    --container-padding: 3rem;
+    --gap: 2rem;
+    --text-color: #C2C2C2;
+    --primary-color: #F26419;
+    --background-gradient: linear-gradient(180deg, #0E4A56, #081316);
+    --border-color: white;
+    --shadow-color: #00000058;
+}
+
 .hm-gf-container-1 {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(180deg, #0E4A56, #081316);
+    background: var(--background-gradient);
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x:hidden;
+    overflow-x: hidden;
+    padding: var(--container-padding) 1;
 }
 
 .hm-gf-content {
@@ -16,35 +35,35 @@
     justify-content: space-between;
     max-width: 100%;
     width: 100%;
-    gap: 2rem;
+    gap: var(--gap);
 }
 
 .hm-gf-t {
     max-width: 40%;
-    margin-inline-start: 3rem;
+    margin-inline-start: var(--container-padding);
 }
 
 .hm-gf-t1, .hm-gf-t2 {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
-    font-size: clamp(2rem, 4vw, 3.75rem); /* Adjusts for larger screens */
+    font-size: var(--font-large);
     color: white;
 }
 
 .hm-gf-t2 {
-    margin-inline-start: -4rem;
+    margin-inline-start: calc(var(--container-padding) * -1);
 }
 
 .hm-gf-t2-sp {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
     margin-left: 2rem;
-    font-size: clamp(2rem, 4vw, 3.75rem); /* Adjusts for larger screens */
-    color: #F26419;
-    border-left: 2px solid white;
+    font-size: var(--font-large);
+    color: var(--primary-color);
+    border-left: 2px solid var(--border-color);
     padding-left: 20px;
     padding-right: 20px;
-    border-right: 2px solid white;
+    border-right: 2px solid var(--border-color);
 }
 
 .hm-gf-p {
@@ -52,24 +71,24 @@
 }
 
 .hm-gf-para {
-    font-size: clamp(0.875rem, 2vw, 1.3rem); /* Responsive text sizing */
-    color: #C2C2C2;
+    font-size: var(--font-small);
+    color: var(--text-color);
     text-align: justify;
-    margin-left: 3rem;
+    margin-left: var(--container-padding);
 }
 
 .hm-gf-btn {
     margin-top: 3rem;
     max-width: 10%;
-    margin-inline-start: 3rem;
+    margin-inline-start: var(--container-padding);
 }
 
 .hm-gf-expbtn {
     border-radius: 60px;
-    height: clamp(40px, 3vw, 60px); /* Responsive button sizing */
-    width: clamp(120px, 8vw, 150px);
-    font-size: clamp(0.875rem, 2.5vw, 1.25rem);
-    border: 2px solid #F26419;
+    height: var(--button-height);
+    width: var(--button-width);
+    font-size: var(--font-button);
+    border: 2px solid var(--primary-color);
     background-color: transparent;
     color: white;
     cursor: pointer;
@@ -77,20 +96,20 @@
 }
 
 .hm-gf-expbtn:hover {
-    background: #F26419;
-    box-shadow: 0 0 20px #F26419;
+    background: var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-color);
 }
 
 .hm-gf-img-container {
     flex: 1;
     max-width: 50%;
-    margin-right: 10rem;
+    margin-right: calc(var(--container-padding) * 2);
 }
 
 .hm-gf-image {
     width: 100%;
     height: auto;
-    filter: drop-shadow(30px 10px 4px #00000058);
+    filter: drop-shadow(30px 10px 4px var(--shadow-color));
 }
 
 @media (max-width: 400px) {
@@ -99,7 +118,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .hm-gf-content {
         flex-direction: column;
         align-items: center;
@@ -120,6 +139,38 @@
     }
 }
 
+@media (min-width: 641px) and (max-width: 1007px) {
+    .hm-gf-t1, .hm-gf-t2, .hm-gf-t2-sp {
+        font-size: var(--font-large);
+    }
+
+    .hm-gf-para {
+        font-size: var(--font-small);
+    }
+
+    .hm-gf-expbtn {
+        height: var(--button-height);
+        width: var(--button-width);
+        font-size: var(--font-button);
+    }
+}
+
+@media (min-width: 1008px) and (max-width: 1920px) {
+    .hm-gf-t1, .hm-gf-t2, .hm-gf-t2-sp {
+        font-size: var(--font-large);
+    }
+
+    .hm-gf-para {
+        font-size: var(--font-small);
+    }
+
+    .hm-gf-expbtn {
+        height: var(--button-height);
+        width: var(--button-width);
+        font-size: var(--font-button);
+    }
+}
+
 @media (min-width: 1920px) {
     .hm-gf-t1, .hm-gf-t2, .hm-gf-t2-sp {
         font-size: clamp(3rem, 5vw, 4.5rem); /* Larger font sizes for 1920px and above */
@@ -130,8 +181,8 @@
     }
 
     .hm-gf-expbtn {
-        height: clamp(50px, 3.5vw, 70px);
-        width: clamp(140px, 9vw, 180px);
-        font-size: clamp(1rem, 2.8vw, 1.5rem);
+        height: var(--button-height-large);
+        width: var(--button-width-large);
+        font-size: var(--font-button-large);
     }
 }

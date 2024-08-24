@@ -172,7 +172,7 @@
 
     .navbar-quote-btn {
         width: var(--quote-btn-width-large);
-        margin-inline-end: var(--side-gap);
+        margin-inline-end: 9rem;
     }
 }
 
@@ -188,7 +188,7 @@
     .navbar-quote-btn {
         width: var(--quote-btn-width-small);
         font-size: var(--font-size-small);
-        margin-inline-end: var(--side-gap);
+        margin-inline-end: 9rem;
     }
 }
 
@@ -228,10 +228,7 @@
     }
 
     .navbar-quote-btn {
-        width: var(--quote-btn-width-vsmall);
-        font-size: var(--font-size-small);
-        position: absolute; /* Absolute position within navbar */
-        right: 3rem; /* Ensure button stays within viewport */
+        display: none;
     }
 
     .navbar-hamburger {
