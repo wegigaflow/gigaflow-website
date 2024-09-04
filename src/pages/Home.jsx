@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Lottie from 'react-lottie';
 import '../styles/Home.css';
 import GigaH3 from '../assets/Giga-H3.svg';
@@ -20,140 +20,32 @@ import linked from '../assets/linkedin.svg';
 
 export const Home = () => {
 
-  const customTextFieldStyles = () => ({
-    width: '30rem',
-    height: '3rem', // Adjust this height as needed
-    backgroundColor: '#FFFFFF1A',
-    borderRadius: '8px',
-    padding: '0px',
-    margin: '0px',
-    '& .MuiOutlinedInput-root': {
-      borderRadius: '8px',
-      paddingLeft: '16px',
-      fontFamily: '"Poppins", sans-serif',
-      fontWeight: 400,
-      fontStyle: 'normal',
-      color: 'white',
-      height: '100%', // Make the root container take the full height
-  
-      '& input': {
-        height: '100%', // Ensure the input field matches the height
-        padding: '0 14px', // Adjust padding to vertically center the text
-        boxSizing: 'border-box', // Ensures padding doesn't affect the total height
-      },
-  
-      '& fieldset': {
-        borderColor: '#2070B4',
-        height: '100%', // Make the fieldset take the full height
-      },
-  
-      '&:hover fieldset': {
-        borderColor: '#2070B4',
-        boxShadow: '0 0 5px rgba(0, 0, 0, 0.5)',
-      },
-  
-      '&.Mui-focused fieldset': {
-        borderColor: '#2070B4',
-        boxShadow: '0 0 5px rgba(0, 0, 0, 0.5)',
-      },
-    },
-  
-    '& .MuiInputLabel-root': {
-      color: 'white',
-    },
-  
-    '& .MuiInputLabel-root.Mui-focused': {
-      color: 'white',
-    },
-  });
-  
-  const customTextFieldStyles1 = () => ({
-    width: '30rem',
-    height: '9rem', // Adjust this height as needed
-    backgroundColor: '#FFFFFF1A',
-    borderRadius: '8px',
-    '& .MuiOutlinedInput-root': {
-      borderRadius: '8px',
-      paddingLeft: '16px',
-      fontFamily: '"Poppins", sans-serif',
-      fontWeight: 400,
-      fontStyle: 'normal',
-      color: 'white',
-      height: '100%', // Make the root container take the full height
-  
-      '& input': {
-        height: '100%', // Ensure the input field matches the height
-        padding: '0 14px', // Adjust padding to vertically center the text
-        boxSizing: 'border-box', // Ensures padding doesn't affect the total height
-      },
-  
-      '& fieldset': {
-        borderColor: '#2070B4',
-        height: '100%', // Make the fieldset take the full height
-      },
-  
-      '&:hover fieldset': {
-        borderColor: '#2070B4',
-        boxShadow: '0 0 5px rgba(0, 0, 0, 0.5)',
-      },
-  
-      '&.Mui-focused fieldset': {
-        borderColor: '#2070B4',
-        boxShadow: '0 0 5px rgba(0, 0, 0, 0.5)',
-      },
-    },
-  
-    '& .MuiInputLabel-root': {
-      color: 'white',
-    },
-  
-    '& .MuiInputLabel-root.Mui-focused': {
-      color: 'white',
-    },
-  });
+  const [nameValue, setNameValue] = useState('');
+  const [emailValue, setEmailValue] = useState('');
+  const [queryValue, setQueryValue] = useState('');
 
-  // const instaOptions = {
-  //   loop: true,
-  //   autoplay: true, 
-  //   animationData: insta,
-  //   rendererSettings: {
-  //     preserveAspectRatio: 'xMidYMid slice'
-  //   }
-  // };
+  const handleNameChange = (e) => {
+    setNameValue(e.target.value);
+  };
 
-  // const watsapOptions = {
-  //   loop: true,
-  //   autoplay: true, 
-  //   animationData: watsap,
-  //   rendererSettings: {
-  //     preserveAspectRatio: 'xMidYMid slice'
-  //   }
-  // };
+  const handleEmailChange = (e) => {
+    setEmailValue(e.target.value);
+  };
 
-  // const xOptions = {
-  //   loop: true,
-  //   autoplay: true, 
-  //   animationData: x,
-  //   rendererSettings: {
-  //     preserveAspectRatio: 'xMidYMid slice'
-  //   }
-  // };
+  const handleQueryChange = (e) => {
+    setQueryValue(e.target.value);
+  };
 
-  // const linkedOptions = {
-  //   loop: true,
-  //   autoplay: true, 
-  //   animationData: linked,
-  //   rendererSettings: {
-  //     preserveAspectRatio: 'xMidYMid slice'
-  //   }
-  // };
+  const handleSubmitClick = () => {}
+
+  const handleGetQuoteClick = () => {}
 
   return (
     <div className='hm-gf-container-1'>
       <div className='hm-gf-content'>
         <div className='hm-gf-t'>
-          <h1 className='hm-gf-t1'>Digital solutions for</h1>
-          <h1 className='hm-gf-t2'>Your<span className='hm-gf-t2-sp'>Business</span></h1>
+          <div className='hm-gf-t1'>Digital solutions for</div>
+          <div className='hm-gf-t2'>Your<span className='hm-gf-t2-sp'>Business</span></div>
           <p className='hm-gf-para'>
             At GigaFlow, we specialize in creating innovative websites, optimizing online presence, and analyzing data to unlock your business's full potential. Our team of experts is dedicated to delivering tailor-made digital solutions that not only meet but exceed your expectations. Whether you're looking to build a stunning website, improve your search engine rankings, or make data-driven decisions, GigaFlow is your trusted partner in the digital world.
           </p>
@@ -188,8 +80,9 @@ export const Home = () => {
                 <div className='hm-service-card-img'>
                   <img src={GigaC1} alt="Digital Solutions" className='hm-service-card-image' />
                 </div>
-                <div className='hm-service-card-t'>Web Development</div>
-                <div className='hm-service-card-content'>At GigaFlow, we build more than just websites—we create digital experiences that resonate with your audience. Our web development services are designed to bring your vision to life, whether you need a simple brochure site, a complex e-commerce platform, or a dynamic web application.</div>
+                <div className='hm-service-card-content'>
+                  <div className='hm-service-card-t'><b>Web Development</b></div>
+                  At GigaFlow, we build more than just websites—we create digital experiences that resonate with your audience. Our web development services are designed to bring your vision to life, whether you need a simple brochure site, a complex e-commerce platform, or a dynamic web application.</div>
               </div>
             </div>
             <div className='hm-service-card'>
@@ -197,8 +90,9 @@ export const Home = () => {
                 <div className='hm-service-card-img'>
                   <img src={GigaC2} alt="Digital Solutions" className='hm-service-card-image' />
                 </div>
-                <div className='hm-service-card-t'>SEO</div>
-                <div className='hm-service-card-content'>Visibility is key to online success. We understand that having a great website is only the first step. Our SEO services are designed to elevate your online presence, ensuring that your target audience can find you easily when they search for the products or services you offer.</div>
+                <div className='hm-service-card-content'>
+                  <div className='hm-service-card-t'><b>SEO</b></div>
+                  Visibility is key to online success. We understand that having a great website is only the first step. Our SEO services are designed to elevate your online presence, ensuring that your target audience can find you easily when they search for the products or services you offer.</div>
               </div>
             </div>
             <div className='hm-service-card'>
@@ -206,8 +100,9 @@ export const Home = () => {
                 <div className='hm-service-card-img'>
                   <img src={GigaC3} alt="Digital Solutions" className='hm-service-card-image' />
                 </div>
-                <div className='hm-service-card-t'>Data Analysis</div>
-                <div className='hm-service-card-content'>Unlock the full potential of your business data with our expert data analysis services. At GigaFlow, we specialize in turning raw data into actionable insights, enabling you to make informed decisions that drive growth and enhance your business performance.</div>
+                <div className='hm-service-card-content'>
+                  <div className='hm-service-card-t'><b>Data Analysis</b></div>
+                  Unlock the full potential of your business data with our expert data analysis services. At GigaFlow, we specialize in turning raw data into actionable insights, enabling you to make informed decisions that drive growth and enhance your business performance.</div>
               </div>
             </div>
           </div>
@@ -225,17 +120,21 @@ export const Home = () => {
                 <div className='hm-team-row-card-img'>
                   <img src={Gowdamras} alt="Digital Solutions" className='hm-team-image' />
                 </div>
-                <div className='hm-team-row-card-name'>Gowthamraj M S</div>
-                <div className='hm-team-row-card-desg'>Founder & CEO</div>
-                <div className='hm-team-row-card-company'>GigaFlow</div>
+                <div className='hm-team-row-card-img-text'>
+                  <div className='hm-team-row-card-name'>Gowthamraj M S</div>
+                  <div className='hm-team-row-card-desg'>Founder & CEO</div>
+                  <div className='hm-team-row-card-company'>GigaFlow</div>
+                </div>
               </div>
               <div className='hm-team-row-card'>
                 <div className='hm-team-row-card-img'>
                   <img src={God} alt="Digital Solutions" className='hm-team-image' />
                 </div>
-                <div className='hm-team-row-card-name'>Godreign Elgin Y</div>
-                <div className='hm-team-row-card-desg'>Co-Founder & CEO</div>
-                <div className='hm-team-row-card-company'>GigaFlow</div>
+                <div className='hm-team-row-card-img-text'>
+                  <div className='hm-team-row-card-name'>Godreign Elgin Y</div>
+                  <div className='hm-team-row-card-desg'>Co-Founder & CEO</div>
+                  <div className='hm-team-row-card-company'>GigaFlow</div>
+                </div>
               </div>
             </div>
           </div>
@@ -245,25 +144,31 @@ export const Home = () => {
                 <div className='hm-team-row-card-img'>
                   <img src={Ling} alt="Digital Solutions" className='hm-team-image' />
                 </div>
-                <div className='hm-team-row-card-name'>Lingesh T</div>
-                <div className='hm-team-row-card-desg'>Frontend Developer</div>
-                <div className='hm-team-row-card-company'>GigaFlow</div>
+                <div className='hm-team-row-card-img-text'>
+                  <div className='hm-team-row-card-name'>Lingesh T</div>
+                  <div className='hm-team-row-card-desg'>Frontend Developer</div>
+                  <div className='hm-team-row-card-company'>GigaFlow</div>
+                </div>
               </div>
               <div className='hm-team-row-card'>
                 <div className='hm-team-row-card-img'>
                   <img src={Gowdaam} alt="Digital Solutions" className='hm-team-image' />
                 </div>
-                <div className='hm-team-row-card-name'>Gowthaam J</div>
-                <div className='hm-team-row-card-desg'>Backend Developer</div>
-                <div className='hm-team-row-card-company'>GigaFlow</div>
+                <div className='hm-team-row-card-img-text'>
+                  <div className='hm-team-row-card-name'>Gowthaam J</div>
+                  <div className='hm-team-row-card-desg'>Backend Developer</div>
+                  <div className='hm-team-row-card-company'>GigaFlow</div>
+                </div>
               </div>
               <div className='hm-team-row-card'>
                 <div className='hm-team-row-card-img'>
                   <img src={Dhaya} alt="Digital Solutions" className='hm-team-image' />
                 </div>
-                <div className='hm-team-row-card-name'>Dhayananth E</div>
-                <div className='hm-team-row-card-desg'>Marketing Lead</div>
-                <div className='hm-team-row-card-company'>GigaFlow</div>
+                <div className='hm-team-row-card-img-text'>
+                  <div className='hm-team-row-card-name'>Dhayananth E</div>
+                  <div className='hm-team-row-card-desg'>Marketing Lead</div>
+                  <div className='hm-team-row-card-company'>GigaFlow</div>
+                </div>
               </div>
             </div>
           </div>
@@ -283,59 +188,38 @@ export const Home = () => {
             <div className='hm-footer-upper-mid'>
               <div className='hm-footer-upper-mid-t'>Contact Us</div>
               <div className='hm-footer-upper-mid-name'>
-               <TextField 
-                id="outlined-basic" 
-                label="Name" 
-                variant="outlined" 
-                sx={customTextFieldStyles()}
+                <input
+                  type="text"
+                  value={nameValue}
+                  onChange={handleNameChange}
+                  className="hm-footer-text-small"
+                  placeholder="Name"
                 />
               </div>
               <div className='hm-footer-upper-mid-email'>
-               <TextField 
-                id="outlined-basic" 
-                label="Email" 
-                variant="outlined" 
-                sx={customTextFieldStyles()}/>
-
+                <input
+                  type="email"
+                  value={emailValue}
+                  onChange={handleEmailChange}
+                  className="hm-footer-text-small"
+                  placeholder="Email"
+                />
               </div>
               <div className='hm-footer-upper-mid-query'>
-               <TextField
-                id="outlined-basic" 
-                label="Type your query here..." 
-                variant="outlined" 
-                sx={customTextFieldStyles1()}
+                <input
+                  type="text"
+                  value={queryValue}
+                  onChange={handleQueryChange}
+                  className="hm-footer-text-small"
+                  placeholder="Type your Query..."
                 />
               </div>
               <div className='hm-footer-upper-mid-buttons'>
                 <div className='hm-footer-upper-mid-buttons-submit'>
-                  <Button 
-                    variant="outlined"
-                    sx={{
-                      height: '3rem',
-                      width: '14.5rem',
-                      border: '2px solid #F26419',
-                      borderRadius: '1.5rem',
-                      color: 'white',
-                      '&:hover':{
-                        color: 'white',
-                        border: '2px solid #F26419',
-                        boxShadow: '0px 4px 10px #ff894a',
-                      },
-                    }}>Submit</Button>
+                  <button onClick={handleSubmitClick} className="hm-footer-submit-button">Submit</button>
                 </div>
                 <div className='hm-footer-upper-mid-buttons-getquote'>
-                  <Button 
-                    variant="contained"
-                    sx={{
-                      height: '3rem',
-                      width: '14.5rem',
-                      backgroundColor: '#F26419',
-                      borderRadius: '1.5rem',
-                      '&:hover':{
-                        backgroundColor: '#F26419',
-                        boxShadow: '0px 4px 10px #ff894a',
-                      },
-                    }}>Get Quote</Button>                  
+                  <button onClick={handleGetQuoteClick} className="hm-footer-getquery-button">Get Quote</button>
                 </div>
               </div>
             </div>
@@ -346,10 +230,6 @@ export const Home = () => {
                 <img src={watsap} alt='watsap logo' className='social-icons' id='watsap-icon'></img>
                 <img src={x} alt='twitter logo' className='social-icons' id='x-icon'></img>
                 <img src={linked} alt='linked in logo' className='social-icons' id='linkedin-icon'></img>
-                {/* <Lottie options={instaOptions} height={40} width={40} style={{color: '#F26419'}}/>
-                <Lottie options={watsapOptions} height={40} width={40} />
-                <Lottie options={xOptions} height={40} width={40} />
-                <Lottie options={linkedOptions} height={40} width={40} /> */}
               </div>
               <div className='hm-footer-upper-right-support'>Support</div>
               <div className='hm-footer-upper-right-support-link'><a>wegigaflow@gmail.com</a></div>
