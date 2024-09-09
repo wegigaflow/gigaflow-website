@@ -27,6 +27,10 @@
 .App-link {
   color: #61dafb;
 }
+/* index.css or App.css */
+html {
+  scroll-behavior: smooth;
+}
 
 @keyframes App-logo-spin {
   from {

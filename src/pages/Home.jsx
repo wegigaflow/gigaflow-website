@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Lottie from "react-lottie";
 import "../styles/Home.css";
 import GigaH3 from "../assets/Giga-H3.svg";
 import GigaC1 from "../assets/Giga-C1.svg";
@@ -10,9 +9,7 @@ import God from "../assets/God.png";
 import Gowdaam from "../assets/Gowthaam.png";
 import Dhaya from "../assets/Dhayananth.png";
 import Ling from "../assets/Ling.png";
-import TextField from "@mui/material/TextField";
 import logo from "../assets/Logo-1.png";
-import { Button } from "@mui/material";
 import insta from "../assets/Giga-Insta.png";
 import watsap from "../assets/Giga-WA.png";
 import x from "../assets/Giga-X.png";
@@ -49,7 +46,7 @@ export const Home = () => {
 
   return (
     <div className="hm-gf-container-1">
-      <div className="hm-gf-content">
+      <div className="hm-gf-content"  id="home">
         <div className="hm-gf-t">
           <div className="hm-gf-t1">Digital solutions for</div>
           <div className="hm-gf-t2">
@@ -75,7 +72,7 @@ export const Home = () => {
 
       {/* about content from here on...... */}
 
-      <div className="hm-about-container">
+      <div className="hm-about-container"  id="about">
         <div className="hm-about-content">
           <div className="hm-about-t">About Us</div>
           <div className="hm-about-para">
@@ -108,7 +105,7 @@ export const Home = () => {
 
       {/* Services content */}
 
-      <div className="hm-service-container">
+      <div className="hm-service-container" id="services">
         <div className="hm-service-content">
           <div className="hm-service-t">Services</div>
           <div className="hm-service-cards-container">
@@ -269,7 +266,7 @@ export const Home = () => {
 
       {/* footer */}
 
-      <div className="hm-footer-container">
+      <div className="hm-footer-container" id="contact">
         <div className="hm-footer-content">
           <div className="hm-footer-upper">
             <div className="hm-footer-upper-left">

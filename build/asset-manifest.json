@@ -1,16 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.9c5e0d18.css",
-    "main.js": "/static/js/main.a701dcf5.js",
+    "main.css": "/static/css/main.3a433f7d.css",
+    "main.js": "/static/js/main.1c9201d4.js",
     "static/js/453.8ab44547.chunk.js": "/static/js/453.8ab44547.chunk.js",
+    "static/media/God.png": "/static/media/God.1551aceacf7d0e0ae3c7.png",
+    "static/media/Gowthaam.png": "/static/media/Gowthaam.ae817b962cc7d1be5d87.png",
+    "static/media/Dhayananth.png": "/static/media/Dhayananth.200f1a3f0b1c4628eca4.png",
+    "static/media/Giga-H3.svg": "/static/media/Giga-H3.af21206e451975bf4c8650051337a6f4.svg",
+    "static/media/Ling.png": "/static/media/Ling.6bab79dc3acf84d85ff0.png",
+    "static/media/Gowdamras.png": "/static/media/Gowdamras.c6d58c2159a6fbec6007.png",
+    "static/media/Giga-C1.svg": "/static/media/Giga-C1.fe882f2c9bd9dcc13d4b7027cde18862.svg",
+    "static/media/Giga-C2.svg": "/static/media/Giga-C2.fd5d871b42ef065c5af4234db991b433.svg",
+    "static/media/Giga-C3.svg": "/static/media/Giga-C3.f0a6bfb9c15862fc0ad84976cd91fbfd.svg",
+    "static/media/Giga-Insta.png": "/static/media/Giga-Insta.1792ff30fb032c94685c.png",
+    "static/media/Giga-WA.png": "/static/media/Giga-WA.ea854ab10413f43fcc0d.png",
+    "static/media/Giga-X.png": "/static/media/Giga-X.7e40f617aaa8eca864bb.png",
+    "static/media/Giga-Lin.png": "/static/media/Giga-Lin.17e919bb623c20be8b80.png",
     "static/media/Logo-1.png": "/static/media/Logo-1.e2c7b0851aba26a5bed2.png",
     "index.html": "/index.html",
-    "main.9c5e0d18.css.map": "/static/css/main.9c5e0d18.css.map",
-    "main.a701dcf5.js.map": "/static/js/main.a701dcf5.js.map",
+    "main.3a433f7d.css.map": "/static/css/main.3a433f7d.css.map",
+    "main.1c9201d4.js.map": "/static/js/main.1c9201d4.js.map",
     "453.8ab44547.chunk.js.map": "/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c5e0d18.css",
-    "static/js/main.a701dcf5.js"
+    "static/css/main.3a433f7d.css",
+    "static/js/main.1c9201d4.js"
   ]
 }
