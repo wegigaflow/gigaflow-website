@@ -574,8 +574,10 @@
     width: auto;
 }
 
-.hm-footer-upper-right-support-link{
+.hm-footer-upper-right-support-link a{
     font-size: var(--font-small);
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 .hm-footer-line{

@@ -12,7 +12,13 @@ const Navbar = () => {
   };
 
   const handleQuoteClick = () => {
-    window.location.href = '/quote';
+    const whatsappNumber = '+918903844107'; // Replace with your WhatsApp number
+    const message = encodeURIComponent(
+      'Hello, I would like to get a quote for the services. Please provide more details.'
+    );
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+    
+    window.open(whatsappUrl, '_blank'); // Opens WhatsApp in a new tab
   };
 
   return (
