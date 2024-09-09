@@ -125,41 +125,6 @@
     
 }
 
-/* Hamburger icon */
-.navbar-hamburger {
-    display: none;
-    cursor: pointer;
-    color: var(--text-color);
-    font-size: 1.5rem; /* Adjust size as needed */
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for animations */
-}
-
-/* Hamburger lines */
-.navbar-hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-color);
-    margin: 5px 0;
-    transition: transform 0.3s ease; /* Smooth transition for lines */
-}
-
-/* Active state for hamburger icon */
-.navbar-hamburger.active {
-    color: var(--quote-btn-bg); /* Change color when active */
-}
-
-.navbar-hamburger.active div:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 6px); /* Animate the first line */
-}
-
-.navbar-hamburger.active div:nth-child(2) {
-    opacity: 0; /* Hide the middle line */
-}
-
-.navbar-hamburger.active div:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -6px); /* Animate the third line */
-}
-
 /* Responsive adjustments */
 @media (max-width: 1400px) {
     .navbar-unique-container {
@@ -229,11 +194,10 @@
     }
 
     .navbar-quote-btn {
-        display: none;
-    }
-
-    .navbar-hamburger {
         display: block;
-        margin-inline-end: 3rem; /* Adjust margin to fit within the navbar */
+        margin-inline-end: 3rem;
+        width: 5rem;
+        height: 2rem;
+        font-size: 12px;
     }
 }

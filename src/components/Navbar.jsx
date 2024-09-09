@@ -38,9 +38,6 @@ const Navbar = () => {
           </ul>
         </div>
         <button className='navbar-quote-btn' onClick={handleQuoteClick}>Get Quote</button>
-        <div className='navbar-hamburger' onClick={toggleMenu}>
-          {menuOpen ? <CloseIcon /> : <MenuIcon />}
-        </div>
       </nav>
     </header>
   );

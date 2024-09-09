@@ -13,10 +13,10 @@ import Ling from "../assets/Ling.png";
 import TextField from "@mui/material/TextField";
 import logo from "../assets/Logo-1.png";
 import { Button } from "@mui/material";
-import insta from "../assets/insta.svg";
-import watsap from "../assets/watsap.svg";
-import x from "../assets/x.svg";
-import linked from "../assets/linkedin.svg";
+import insta from "../assets/Giga-Insta.png";
+import watsap from "../assets/Giga-WA.png";
+import x from "../assets/Giga-X.png";
+import linked from "../assets/Giga-Lin.png";
 
 export const Home = () => {
   const [nameValue, setNameValue] = useState("");
@@ -35,7 +35,7 @@ export const Home = () => {
     setQueryValue(e.target.value);
   };
 
-  const handleSubmitClick = () => {};
+  const handleSubmitClick = () => { };
 
   const handleGetQuoteClick = () => {
     const whatsappNumber = "+918903844107";
@@ -43,7 +43,7 @@ export const Home = () => {
       `Hello, I would like to get a quote for the services. My name is ${nameValue}.`
     );
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
-    
+
     window.open(whatsappUrl, "_blank"); // Opens the WhatsApp chat in a new tab
   };
 
@@ -328,35 +328,32 @@ export const Home = () => {
             <div className="hm-footer-upper-right">
               <div className="hm-footer-upper-right-social">Social Links</div>
               <div className="hm-footer-upper-right-icons">
-                <img
-                  src={insta}
-                  alt="instagram logo"
-                  className="social-icons"
-                  id="insta-icon"
-                ></img>
-                <img
-                  src={watsap}
-                  alt="watsap logo"
-                  className="social-icons"
-                  id="watsap-icon"
-                ></img>
-                <img
-                  src={x}
-                  alt="twitter logo"
-                  className="social-icons"
-                  id="x-icon"
-                ></img>
-                <img
-                  src={linked}
-                  alt="linked in logo"
-                  className="social-icons"
-                  id="linkedin-icon"
-                ></img>
+                <a href="https://www.instagram.com/wegigaflow/" target="_blank" rel="noopener noreferrer" className="social-icons-1">
+                  <img src={insta} alt="instagram logo" className="social-icons-1" id="insta-icon" />
+                </a>
+                <a href="https://wa.me/+918903844107" target="_blank" rel="noopener noreferrer" className="social-icons">
+                  <img src={watsap} alt="whatsapp logo" className="social-icons" id="watsap-icon" />
+                </a>
+                <a href="https://x.com/gigaflowlabs" target="_blank" rel="noopener noreferrer" className="social-icons-2">
+                  <img src={x} alt="x logo" className="social-icons-2" id="x-icon" />
+                </a>
+                <a href="https://www.linkedin.com/in/gigaflow-labs-b54411321/" target="_blank" rel="noopener noreferrer" className="social-icons">
+                  <img src={linked} alt="linkedin logo" className="social-icons" id="linkedin-icon" />
+                </a>
               </div>
               <div className="hm-footer-upper-right-support">Support</div>
-              <div className='hm-footer-upper-right-support-link'>
-                <a href="mailto:wegigaflow@gmail.com">wegigaflow@gmail.com</a>
-</div>
+              <div className="hm-footer-upper-right-support-link">
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=contact.gigaflowlabs@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hm-footer-upper-right-support-link"
+                >
+                  contact.gigaflowlabs@gmail.com
+                </a>
+              </div>
+
+
 
 
             </div>
